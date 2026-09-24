@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {"colors": {"on-primary-fixed": "#001946", "on-surface": "#1b1c1d", "surface-bright": "#faf9fa", "on-secondary": "#ffffff", "inverse-on-surface": "#f2f0f1", "surface-dim": "#dbdadb", "outline": "#737784", "inverse-primary": "#b1c5ff", "on-primary": "#ffffff", "on-surface-variant": "#434653", "on-background": "#1b1c1d", "primary-fixed": "#d9e2ff", "on-error-container": "#93000a", "tertiary": "#6d5e00", "secondary-fixed": "#dfe3e8", "on-primary-fixed-variant": "#00419d", "surface-container-lowest": "#ffffff", "on-error": "#ffffff", "surface-tint": "#2259bf", "on-tertiary-fixed": "#211b00", "error": "#ba1a1a", "on-tertiary-fixed-variant": "#524600", "primary-container": "#3366cc", "surface-variant": "#e3e2e3", "secondary-fixed-dim": "#c2c7cc", "surface-container-highest": "#e3e2e3", "tertiary-fixed": "#f9e37a", "primary": "#094cb2", "tertiary-fixed-dim": "#dcc661", "secondary": "#5a5f63", "surface-container-low": "#f5f3f4", "surface": "#faf9fa", "on-tertiary-container": "#4a3f00", "inverse-surface": "#303031", "tertiary-container": "#bfab49", "on-secondary-fixed-variant": "#42474b", "surface-container-high": "#e9e8e9", "outline-variant": "#c3c6d5", "secondary-container": "#dfe3e8", "surface-container": "#efedee", "on-secondary-container": "#606569", "on-primary-container": "#e7ebff", "background": "#faf9fa", "primary-fixed-dim": "#b1c5ff", "error-container": "#ffdad6", "on-secondary-fixed": "#171c20", "on-tertiary": "#ffffff"}, "borderRadius": {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"}, "fontFamily": {"headline": ["Noto Serif"], "display": ["Noto Serif"], "body": ["Inter"], "label": ["Public Sans"]}}}};</script><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Noto+Serif:wght@400;600;700&amp;family=Public+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/></head><body class="bg-surface font-body text-on-surface"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col pt-8 pb-8 px-6"><div class="mb-12"><h1 class="text-2xl font-headline font-bold tracking-tight text-on-surface">Alexandria</h1><p class="text-xs font-label text-outline uppercase tracking-wider mt-1">Academic Analytics</p></div><nav class="flex-1 space-y-2" data-active-classes="bg-primary text-on-primary font-medium rounded-xl shadow-sm"><a class="flex items-center px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="dashboard" href="#"><span class="material-symbols-outlined mr-3 text-[20px]">dashboard</span>Dashboard</a><a aria-current="page" class="flex items-center px-4 py-3 transition-all bg-primary text-on-primary font-medium rounded-xl shadow-sm" data-path="student-directory" href="#"><span class="material-symbols-outlined mr-3 text-[20px]">group</span>Student Directory</a><a class="flex items-center px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="course-performance" href="#"><span class="material-symbols-outlined mr-3 text-[20px]">school</span>Course Performance</a><a class="flex items-center px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="grade-analytics" href="#"><span class="material-symbols-outlined mr-3 text-[20px]">analytics</span>Grade Analytics</a><a class="flex items-center px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="reports" href="#"><span class="material-symbols-outlined mr-3 text-[20px]">description</span>Reports</a></nav><div class="pt-4 mt-auto border-t border-outline-variant/15"><div class="flex items-center gap-3 px-2"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="overflow-hidden"><p class="text-sm font-medium text-on-surface truncate">Dr. Eleanor Vance</p><p class="text-xs text-outline truncate">Faculty of Letters</p></div></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-20 bg-surface/80 backdrop-blur-xl z-40 flex items-center justify-between px-10 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center w-96 bg-surface-container-high/60 rounded-xl px-4 py-2.5"><span class="material-symbols-outlined text-outline text-[20px] mr-3">search</span><input class="bg-transparent border-none outline-none text-sm w-full text-on-surface placeholder:text-outline" placeholder="Search students, courses, or records..." type="text"/></div><div class="flex items-center gap-6"><button class="text-outline hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[22px]">notifications</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="relative pt-20 bg-surface min-h-screen px-12 py-10"><div class="flex flex-col w-full">
+<!-- Top Editorial Header & Quick Metrics -->
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+<div>
+<span class="text-xs font-label uppercase tracking-widest text-outline mb-2 block">Directory &amp; Records / Academic Year 2024-2025</span>
+<h2 class="text-4xl font-headline font-bold text-on-surface tracking-tight">Student Directory</h2>
+<p class="text-sm font-body text-on-surface-variant mt-2 max-w-xl">Comprehensive registry of enrolled undergraduate and graduate scholars across the Faculty of Letters and Sciences.</p>
+</div>
+<div class="flex items-center gap-3">
+<button class="flex items-center gap-2 px-5 py-3 rounded-xl bg-surface-container-high hover:bg-surface-dim text-on-surface text-sm font-medium transition-all shadow-sm" onclick="openExportModal()">
+<span class="material-symbols-outlined text-[18px]">download</span>Export Records
+      </button>
+<button class="flex items-center gap-2 px-5 py-3 rounded-xl bg-gradient-to-r from-primary to-primary-container text-on-primary text-sm font-medium transition-all shadow-sm hover:opacity-95" onclick="openAddStudentModal()">
+<span class="material-symbols-outlined text-[18px]">person_add</span>Admit Student
+      </button>
+</div>
+</div>
+<!-- Metric Overview Cards (Asymmetric Bento) -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
+<div class="bg-surface-container-low rounded-xl p-6 flex flex-col justify-between shadow-sm">
+<div class="flex items-center justify-between text-outline mb-4">
+<span class="text-xs font-label uppercase tracking-wider">Total Enrolled</span>
+<span class="material-symbols-outlined text-primary text-[20px]">group</span>
+</div>
+<div>
+<div class="text-3xl font-headline font-bold text-on-surface">2,842</div>
+<div class="text-xs text-tertiary font-medium mt-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">trending_up</span> +4.2% from last term
+        </div>
+</div>
+</div>
+<div class="bg-surface-container-low rounded-xl p-6 flex flex-col justify-between shadow-sm">
+<div class="flex items-center justify-between text-outline mb-4">
+<span class="text-xs font-label uppercase tracking-wider">Dean's List</span>
+<span class="material-symbols-outlined text-tertiary text-[20px]">military_tech</span>
+</div>
+<div>
+<div class="text-3xl font-headline font-bold text-on-surface">614</div>
+<div class="text-xs text-outline mt-1">21.6% of active body</div>
+</div>
+</div>
+<div class="bg-surface-container-low rounded-xl p-6 flex flex-col justify-between shadow-sm">
+<div class="flex items-center justify-between text-outline mb-4">
+<span class="text-xs font-label uppercase tracking-wider">Academic Probation</span>
+<span class="material-symbols-outlined text-error text-[20px]">warning</span>
+</div>
+<div>
+<div class="text-3xl font-headline font-bold text-on-surface">43</div>
+<div class="text-xs text-error mt-1">Requiring faculty review</div>
+</div>
+</div>
+<div class="bg-surface-container-low rounded-xl p-6 flex flex-col justify-between shadow-sm">
+<div class="flex items-center justify-between text-outline mb-4">
+<span class="text-xs font-label uppercase tracking-wider">Average GPA</span>
+<span class="material-symbols-outlined text-primary text-[20px]">analytics</span>
+</div>
+<div>
+<div class="text-3xl font-headline font-bold text-on-surface">3.48</div>
+<div class="text-xs text-outline mt-1">Scale: 4.0 Max</div>
+</div>
+</div>
+</div>
+<!-- Filter & Search Toolbar -->
+<div class="bg-surface-container-low rounded-xl p-4 mb-6 flex flex-col md:flex-row items-center justify-between gap-4 shadow-sm">
+<div class="flex flex-wrap items-center gap-3 w-full md:w-auto">
+<div class="relative flex-1 md:w-72">
+<span class="material-symbols-outlined absolute left-3 top-3 text-outline text-[18px]">search</span>
+<input class="w-full bg-surface-container-lowest text-on-surface text-sm rounded-xl pl-10 pr-4 py-2.5 outline-none focus:ring-1 focus:ring-primary transition-all placeholder:text-outline" id="studentSearchInput" onkeyup="filterStudents()" placeholder="Filter by name, ID, or major..." type="text"/>
+</div>
+<select class="bg-surface-container-lowest text-on-surface text-sm rounded-xl px-4 py-2.5 outline-none focus:ring-1 focus:ring-primary transition-all" id="statusFilter" onchange="filterStudents()">
+<option value="">All Academic Statuses</option>
+<option value="Dean's List">Dean's List</option>
+<option value="Good Standing">Good Standing</option>
+<option value="Probation">Probation</option>
+</select>
+<select class="bg-surface-container-lowest text-on-surface text-sm rounded-xl px-4 py-2.5 outline-none focus:ring-1 focus:ring-primary transition-all" id="majorFilter" onchange="filterStudents()">
+<option value="">All Majors</option>
+<option value="Classical Literature">Classical Literature</option>
+<option value="Comparative History">Comparative History</option>
+<option value="Philosophy &amp; Ethics">Philosophy &amp; Ethics</option>
+<option value="Art History">Art History</option>
+<option value="Theoretical Linguistics">Theoretical Linguistics</option>
+</select>
+</div>
+<div class="text-xs font-label text-outline whitespace-nowrap">
+      Showing <span class="font-bold text-on-surface" id="visibleCount">6</span> of <span class="font-bold text-on-surface">6</span> records
+    </div>
+</div>
+<!-- Main Student Table -->
+<div class="bg-surface-container-low rounded-xl overflow-hidden shadow-sm">
+<table class="w-full text-left border-collapse" id="studentTable">
+<thead>
+<tr class="bg-surface-container-high text-on-surface-variant font-label text-xs uppercase tracking-wider">
+<th class="py-4 px-6 font-semibold">Scholar Name / ID</th>
+<th class="py-4 px-6 font-semibold">Major</th>
+<th class="py-4 px-6 font-semibold">GPA</th>
+<th class="py-4 px-6 font-semibold">Academic Status</th>
+<th class="py-4 px-6 font-semibold">Faculty Advisor</th>
+<th class="py-4 px-6 font-semibold text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/10 text-sm">
+<tr class="hover:bg-surface-container-high/40 transition-colors cursor-pointer group" onclick="openDetailModal('Aurelia Montgomery', 'AX-89214', 'Classical Literature', '3.92', 'Dean\'s List', 'Dr. Alistair Finch', 'Senior', 'aurelia.m@alexandria.edu', 'Thesis: Virgil’s Georgics and Agrarian Poetics', '4.0', '98%')">
+<td class="py-4 px-6">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center font-headline font-bold text-on-primary-fixed">AM</div>
+<div>
+<p class="font-medium text-on-surface group-hover:text-primary transition-colors">Aurelia Montgomery</p>
+<p class="text-xs text-outline font-label">AX-89214</p>
+</div>
+</div>
+</td>
+<td class="py-4 px-6 text-on-surface-variant font-medium">Classical Literature</td>
+<td class="py-4 px-6 font-semibold text-on-surface">3.92</td>
+<td class="py-4 px-6">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium bg-tertiary-fixed text-on-tertiary-fixed">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> Dean's List
+            </span>
+</td>
+<td class="py-4 px-6 text-on-surface-variant">Dr. Alistair Finch</td>
+<td class="py-4 px-6 text-right">
+<button class="p-2 rounded-xl text-outline hover:text-primary hover:bg-surface-container-high transition-all">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-high/40 transition-colors cursor-pointer group" onclick="openDetailModal('Julian Sterling', 'AX-74102', 'Comparative History', '3.75', 'Good Standing', 'Dr. Beatrice Thorne', 'Junior', 'julian.s@alexandria.edu', 'Thesis: Trade Routes of the Late Hellenistic Period', '3.8', '94%')">
+<td class="py-4 px-6">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-secondary-fixed flex items-center justify-center font-headline font-bold text-on-secondary-fixed">JS</div>
+<div>
+<p class="font-medium text-on-surface group-hover:text-primary transition-colors">Julian Sterling</p>
+<p class="text-xs text-outline font-label">AX-74102</p>
+</div>
+</div>
+</td>
+<td class="py-4 px-6 text-on-surface-variant font-medium">Comparative History</td>
+<td class="py-4 px-6 font-semibold text-on-surface">3.75</td>
+<td class="py-4 px-6">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium bg-secondary-fixed text-on-secondary-fixed-variant">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Good Standing
+            </span>
+</td>
+<td class="py-4 px-6 text-on-surface-variant">Dr. Beatrice Thorne</td>
+<td class="py-4 px-6 text-right">
+<button class="p-2 rounded-xl text-outline hover:text-primary hover:bg-surface-container-high transition-all">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-high/40 transition-colors cursor-pointer group" onclick="openDetailModal('Cassian Vane', 'AX-55219', 'Philosophy &amp; Ethics', '2.34', 'Probation', 'Dr. Eleanor Vance', 'Sophomore', 'cassian.v@alexandria.edu', 'Thesis: Moral Relativism in Post-War Continental Philosophy', '2.1', '76%')">
+<td class="py-4 px-6">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-error-container flex items-center justify-center font-headline font-bold text-on-error-container">CV</div>
+<div>
+<p class="font-medium text-on-surface group-hover:text-primary transition-colors">Cassian Vane</p>
+<p class="text-xs text-outline font-label">AX-55219</p>
+</div>
+</div>
+</td>
+<td class="py-4 px-6 text-on-surface-variant font-medium">Philosophy &amp; Ethics</td>
+<td class="py-4 px-6 font-semibold text-on-surface">2.34</td>
+<td class="py-4 px-6">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium bg-error-container text-on-error-container">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span> Probation
+            </span>
+</td>
+<td class="py-4 px-6 text-on-surface-variant">Dr. Eleanor Vance</td>
+<td class="py-4 px-6 text-right">
+<button class="p-2 rounded-xl text-outline hover:text-primary hover:bg-surface-container-high transition-all">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-high/40 transition-colors cursor-pointer group" onclick="openDetailModal('Evangeline DuPont', 'AX-90231', 'Art History', '3.98', 'Dean\'s List', 'Dr. Julian Giraud', 'Senior', 'evangeline.d@alexandria.edu', 'Thesis: The Optics of Light in Northern Renaissance Altarpieces', '4.0', '99%')">
+<td class="py-4 px-6">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center font-headline font-bold text-on-primary-fixed">ED</div>
+<div>
+<p class="font-medium text-on-surface group-hover:text-primary transition-colors">Evangeline DuPont</p>
+<p class="text-xs text-outline font-label">AX-90231</p>
+</div>
+</div>
+</td>
+<td class="py-4 px-6 text-on-surface-variant font-medium">Art History</td>
+<td class="py-4 px-6 font-semibold text-on-surface">3.98</td>
+<td class="py-4 px-6">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium bg-tertiary-fixed text-on-tertiary-fixed">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> Dean's List
+            </span>
+</td>
+<td class="py-4 px-6 text-on-surface-variant">Dr. Julian Giraud</td>
+<td class="py-4 px-6 text-right">
+<button class="p-2 rounded-xl text-outline hover:text-primary hover:bg-surface-container-high transition-all">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-high/40 transition-colors cursor-pointer group" onclick="openDetailModal('Thaddeus Thorne', 'AX-33109', 'Theoretical Linguistics', '3.52', 'Good Standing', 'Dr. Sarah Al-Din', 'Junior', 'thaddeus.t@alexandria.edu', 'Thesis: Generative Syntax in Semitic Morphology', '3.6', '91%')">
+<td class="py-4 px-6">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-secondary-fixed flex items-center justify-center font-headline font-bold text-on-secondary-fixed">TT</div>
+<div>
+<p class="font-medium text-on-surface group-hover:text-primary transition-colors">Thaddeus Thorne</p>
+<p class="text-xs text-outline font-label">AX-33109</p>
+</div>
+</div>
+</td>
+<td class="py-4 px-6 text-on-surface-variant font-medium">Theoretical Linguistics</td>
+<td class="py-4 px-6 font-semibold text-on-surface">3.52</td>
+<td class="py-4 px-6">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium bg-secondary-fixed text-on-secondary-fixed-variant">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Good Standing
+            </span>
+</td>
+<td class="py-4 px-6 text-on-surface-variant">Dr. Sarah Al-Din</td>
+<td class="py-4 px-6 text-right">
+<button class="p-2 rounded-xl text-outline hover:text-primary hover:bg-surface-container-high transition-all">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-high/40 transition-colors cursor-pointer group" onclick="openDetailModal('Beatrice Vance', 'AX-61928', 'Classical Literature', '3.88', 'Dean\'s List', 'Dr. Alistair Finch', 'Senior', 'beatrice.v@alexandria.edu', 'Thesis: Subversive Elegy in Ovid’s Tristia', '3.9', '96%')">
+<td class="py-4 px-6">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center font-headline font-bold text-on-primary-fixed">BV</div>
+<div>
+<p class="font-medium text-on-surface group-hover:text-primary transition-colors">Beatrice Vance</p>
+<p class="text-xs text-outline font-label">AX-61928</p>
+</div>
+</div>
+</td>
+<td class="py-4 px-6 text-on-surface-variant font-medium">Classical Literature</td>
+<td class="py-4 px-6 font-semibold text-on-surface">3.88</td>
+<td class="py-4 px-6">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium bg-tertiary-fixed text-on-tertiary-fixed">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> Dean's List
+            </span>
+</td>
+<td class="py-4 px-6 text-on-surface-variant">Dr. Alistair Finch</td>
+<td class="py-4 px-6 text-right">
+<button class="p-2 rounded-xl text-outline hover:text-primary hover:bg-surface-container-high transition-all">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Detailed Drill-Down Modal (Hidden by default) -->
+<div class="fixed inset-0 bg-inverse-surface/40 backdrop-blur-sm z-50 flex items-center justify-center p-6 hidden" id="studentDetailModal">
+<div class="bg-surface-container-lowest rounded-2xl w-full max-w-2xl overflow-hidden shadow-[0_24px_40px_rgba(27,28,29,0.08)] transform transition-all">
+<!-- Modal Header -->
+<div class="bg-surface-container-low p-8 flex items-start justify-between">
+<div class="flex items-center gap-4">
+<div class="w-16 h-16 rounded-full bg-primary-fixed flex items-center justify-center font-headline font-bold text-2xl text-on-primary-fixed" id="modalInitialsBg">AM</div>
+<div>
+<h3 class="text-2xl font-headline font-bold text-on-surface" id="modalName">Aurelia Montgomery</h3>
+<p class="text-xs font-label text-outline uppercase tracking-wider mt-0.5" id="modalIdMajor">AX-89214 • Classical Literature</p>
+</div>
+</div>
+<button class="p-2 rounded-xl text-outline hover:text-on-surface hover:bg-surface-container-high transition-all" onclick="closeDetailModal()">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Modal Body Content -->
+<div class="p-8 space-y-6">
+<div class="grid grid-cols-3 gap-4">
+<div class="bg-surface-container-low p-4 rounded-xl">
+<span class="text-xs font-label text-outline uppercase tracking-wider block">Cumulative GPA</span>
+<span class="text-2xl font-headline font-bold text-on-surface mt-1 block" id="modalGpa">3.92</span>
+</div>
+<div class="bg-surface-container-low p-4 rounded-xl">
+<span class="text-xs font-label text-outline uppercase tracking-wider block">Academic Status</span>
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-medium bg-tertiary-fixed text-on-tertiary-fixed mt-2" id="modalStatusBadge">Dean's List</span>
+</div>
+<div class="bg-surface-container-low p-4 rounded-xl">
+<span class="text-xs font-label text-outline uppercase tracking-wider block">Year Level</span>
+<span class="text-lg font-headline font-bold text-on-surface mt-1 block" id="modalYear">Senior</span>
+</div>
+</div>
+<div class="space-y-4 pt-2">
+<div class="flex items-center justify-between py-2 border-b border-outline-variant/10">
+<span class="text-sm text-outline font-label">University Email</span>
+<span class="text-sm font-medium text-on-surface" id="modalEmail">aurelia.m@alexandria.edu</span>
+</div>
+<div class="flex items-center justify-between py-2 border-b border-outline-variant/10">
+<span class="text-sm text-outline font-label">Assigned Advisor</span>
+<span class="text-sm font-medium text-on-surface" id="modalAdvisor">Dr. Alistair Finch</span>
+</div>
+<div class="flex items-center justify-between py-2 border-b border-outline-variant/10">
+<span class="text-sm text-outline font-label">Current Research Topic</span>
+<span class="text-sm font-medium text-on-surface text-right" id="modalThesis">Thesis: Virgil’s Georgics</span>
+</div>
+<div class="flex items-center justify-between py-2 border-b border-outline-variant/10">
+<span class="text-sm text-outline font-label">Term Attendance</span>
+<span class="text-sm font-medium text-on-surface" id="modalAttendance">98%</span>
+</div>
+</div>
+<div class="pt-4 flex items-center justify-end gap-3">
+<button class="px-5 py-2.5 rounded-xl bg-surface-container-high hover:bg-surface-dim text-on-surface text-sm font-medium transition-all" onclick="closeDetailModal()">Close</button>
+<button class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-primary to-primary-container text-on-primary text-sm font-medium transition-all shadow-sm" onclick="alert('Student record updated successfully.'); closeDetailModal();">Save Notes</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Add Student Modal (Hidden by default) -->
+<div class="fixed inset-0 bg-inverse-surface/40 backdrop-blur-sm z-50 flex items-center justify-center p-6 hidden" id="addStudentModal">
+<div class="bg-surface-container-lowest rounded-2xl w-full max-w-xl overflow-hidden shadow-[0_24px_40px_rgba(27,28,29,0.08)]">
+<div class="bg-surface-container-low p-6 flex items-center justify-between">
+<h3 class="text-xl font-headline font-bold text-on-surface">Admit New Scholar</h3>
+<button class="p-2 rounded-xl text-outline hover:text-on-surface hover:bg-surface-container-high transition-all" onclick="closeAddStudentModal()">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="p-6 space-y-4">
+<div>
+<label class="text-xs font-label uppercase tracking-wider text-outline block mb-1">Full Name</label>
+<input class="w-full bg-surface-container-low text-on-surface text-sm rounded-xl px-4 py-3 outline-none focus:ring-1 focus:ring-primary" placeholder="e.g., Genevieve LaRue" type="text"/>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div>
+<label class="text-xs font-label uppercase tracking-wider text-outline block mb-1">Major</label>
+<select class="w-full bg-surface-container-low text-on-surface text-sm rounded-xl px-4 py-3 outline-none focus:ring-1 focus:ring-primary">
+<option>Classical Literature</option>
+<option>Comparative History</option>
+<option>Philosophy &amp; Ethics</option>
+<option>Art History</option>
+<option>Theoretical Linguistics</option>
+</select>
+</div>
+<div>
+<label class="text-xs font-label uppercase tracking-wider text-outline block mb-1">Initial GPA</label>
+<input class="w-full bg-surface-container-low text-on-surface text-sm rounded-xl px-4 py-3 outline-none focus:ring-1 focus:ring-primary" placeholder="3.75" type="text"/>
+</div>
+</div>
+<div class="pt-4 flex items-center justify-end gap-3">
+<button class="px-5 py-2.5 rounded-xl bg-surface-container-high hover:bg-surface-dim text-on-surface text-sm font-medium transition-all" onclick="closeAddStudentModal()">Cancel</button>
+<button class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-primary to-primary-container text-on-primary text-sm font-medium transition-all shadow-sm" onclick="alert('New scholar admitted successfully.'); closeAddStudentModal();">Complete Admission</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Export Modal (Hidden by default) -->
+<div class="fixed inset-0 bg-inverse-surface/40 backdrop-blur-sm z-50 flex items-center justify-center p-6 hidden" id="exportModal">
+<div class="bg-surface-container-lowest rounded-2xl w-full max-w-md overflow-hidden shadow-[0_24px_40px_rgba(27,28,29,0.08)]">
+<div class="bg-surface-container-low p-6 flex items-center justify-between">
+<h3 class="text-xl font-headline font-bold text-on-surface">Export Directory Records</h3>
+<button class="p-2 rounded-xl text-outline hover:text-on-surface hover:bg-surface-container-high transition-all" onclick="closeExportModal()">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="p-6 space-y-4">
+<p class="text-sm text-on-surface-variant">Select your preferred export format for the active scholar records dataset.</p>
+<div class="space-y-2">
+<label class="flex items-center gap-3 p-3 rounded-xl bg-surface-container-low cursor-pointer">
+<input checked="" class="text-primary" name="exportFormat" type="radio"/>
+<span class="text-sm font-medium text-on-surface">CSV Spreadsheet (.csv)</span>
+</label>
+<label class="flex items-center gap-3 p-3 rounded-xl bg-surface-container-low cursor-pointer">
+<input class="text-primary" name="exportFormat" type="radio"/>
+<span class="text-sm font-medium text-on-surface">Academic Transcript Archive (PDF)</span>
+</label>
+</div>
+<div class="pt-4 flex items-center justify-end gap-3">
+<button class="px-5 py-2.5 rounded-xl bg-surface-container-high hover:bg-surface-dim text-on-surface text-sm font-medium transition-all" onclick="closeExportModal()">Cancel</button>
+<button class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-primary to-primary-container text-on-primary text-sm font-medium transition-all shadow-sm" onclick="alert('Export generated successfully.'); closeExportModal();">Download Export</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Client-side Search, Filtering & Modal Script -->
+<script>
+    function filterStudents() {
+      const input = document.getElementById('studentSearchInput').value.toLowerCase();
+      const statusFilter = document.getElementById('statusFilter').value.toLowerCase();
+      const majorFilter = document.getElementById('majorFilter').value.toLowerCase();
+      const table = document.getElementById('studentTable');
+      const tr = table.getElementsByTagName('tr');
+      let visibleCount = 0;
+
+      for (let i = 1; i < tr.length; i++) {
+        const tdName = tr[i].getElementsByTagName('td')[0];
+        const tdMajor = tr[i].getElementsByTagName('td')[1];
+        const tdStatus = tr[i].getElementsByTagName('td')[3];
+        
+        if (tdName && tdMajor && tdStatus) {
+          const nameText = tdName.textContent || tdName.innerText;
+          const majorText = tdMajor.textContent || tdMajor.innerText;
+          const statusText = tdStatus.textContent || tdStatus.innerText;
+
+          const matchesSearch = nameText.toLowerCase().includes(input);
+          const matchesStatus = statusFilter === '' || statusText.toLowerCase().includes(statusFilter);
+          const matchesMajor = majorFilter === '' || majorText.toLowerCase().includes(majorFilter);
+
+          if (matchesSearch && matchesStatus && matchesMajor) {
+            tr[i].style.display = "";
+            visibleCount++;
+          } else {
+            tr[i].style.display = "none";
+          }
+        }
+      }
+      document.getElementById('visibleCount').textContent = visibleCount;
+    }
+
+    function openDetailModal(name, id, major, gpa, status, advisor, year, email, thesis, termGpa, attendance) {
+      document.getElementById('modalName').textContent = name;
+      document.getElementById('modalIdMajor').textContent = id + ' • ' + major;
+      document.getElementById('modalGpa').textContent = gpa;
+      document.getElementById('modalYear').textContent = year;
+      document.getElementById('modalEmail').textContent = email;
+      document.getElementById('modalAdvisor').textContent = advisor;
+      document.getElementById('modalThesis').textContent = thesis;
+      document.getElementById('modalAttendance').textContent = attendance;
+
+      const badge = document.getElementById('modalStatusBadge');
+      badge.textContent = status;
+      if (status === "Dean's List") {
+        badge.className = "inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-medium bg-tertiary-fixed text-on-tertiary-fixed mt-2";
+      } else if (status === "Probation") {
+        badge.className = "inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-medium bg-error-container text-on-error-container mt-2";
+      } else {
+        badge.className = "inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-medium bg-secondary-fixed text-on-secondary-fixed-variant mt-2";
+      }
+
+      const initials = name.split(' ').map(n => n[0]).join('');
+      document.getElementById('modalInitialsBg').textContent = initials;
+
+      document.getElementById('studentDetailModal').classList.remove('hidden');
+    }
+
+    function closeDetailModal() {
+      document.getElementById('studentDetailModal').classList.add('hidden');
+    }
+
+    function openAddStudentModal() {
+      document.getElementById('addStudentModal').classList.remove('hidden');
+    }
+
+    function closeAddStudentModal() {
+      document.getElementById('addStudentModal').classList.add('hidden');
+    }
+
+    function openExportModal() {
+      document.getElementById('exportModal').classList.remove('hidden');
+    }
+
+    function closeExportModal() {
+      document.getElementById('exportModal').classList.add('hidden');
+    }
+  </script>
+</div></main></div></body></html>
