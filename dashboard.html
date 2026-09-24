@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {"colors": {"on-primary-fixed": "#001946", "on-surface": "#1b1c1d", "surface-bright": "#faf9fa", "on-secondary": "#ffffff", "inverse-on-surface": "#f2f0f1", "surface-dim": "#dbdadb", "outline": "#737784", "inverse-primary": "#b1c5ff", "on-primary": "#ffffff", "on-surface-variant": "#434653", "on-background": "#1b1c1d", "primary-fixed": "#d9e2ff", "on-error-container": "#93000a", "tertiary": "#6d5e00", "secondary-fixed": "#dfe3e8", "on-primary-fixed-variant": "#00419d", "surface-container-lowest": "#ffffff", "on-error": "#ffffff", "surface-tint": "#2259bf", "on-tertiary-fixed": "#211b00", "error": "#ba1a1a", "on-tertiary-fixed-variant": "#524600", "primary-container": "#3366cc", "surface-variant": "#e3e2e3", "secondary-fixed-dim": "#c2c7cc", "surface-container-highest": "#e3e2e3", "tertiary-fixed": "#f9e37a", "primary": "#094cb2", "tertiary-fixed-dim": "#dcc661", "secondary": "#5a5f63", "surface-container-low": "#f5f3f4", "surface": "#faf9fa", "on-tertiary-container": "#4a3f00", "inverse-surface": "#303031", "tertiary-container": "#bfab49", "on-secondary-fixed-variant": "#42474b", "surface-container-high": "#e9e8e9", "outline-variant": "#c3c6d5", "secondary-container": "#dfe3e8", "surface-container": "#efedee", "on-secondary-container": "#606569", "on-primary-container": "#e7ebff", "background": "#faf9fa", "primary-fixed-dim": "#b1c5ff", "error-container": "#ffdad6", "on-secondary-fixed": "#171c20", "on-tertiary": "#ffffff"}, "borderRadius": {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"}, "fontFamily": {"headline": ["Noto Serif"], "display": ["Noto Serif"], "body": ["Inter"], "label": ["Public Sans"]}}}};</script><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Noto+Serif:wght@400;600;700&amp;family=Public+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/></head><body class="bg-surface font-body text-on-surface"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col pt-8 pb-8 px-6"><div class="mb-12"><h1 class="text-2xl font-headline font-bold tracking-tight text-on-surface">Alexandria</h1><p class="text-xs font-label text-outline uppercase tracking-wider mt-1">Academic Analytics</p></div><nav class="flex-1 space-y-2" data-active-classes="bg-primary text-on-primary font-medium rounded-xl shadow-sm"><a aria-current="page" class="flex items-center px-4 py-3 transition-all bg-primary text-on-primary font-medium rounded-xl shadow-sm" data-path="dashboard" href="#"><span class="material-symbols-outlined mr-3 text-[20px]">dashboard</span>Dashboard</a><a class="flex items-center px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="student-directory" href="#"><span class="material-symbols-outlined mr-3 text-[20px]">group</span>Student Directory</a><a class="flex items-center px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="course-performance" href="#"><span class="material-symbols-outlined mr-3 text-[20px]">school</span>Course Performance</a><a class="flex items-center px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="grade-analytics" href="#"><span class="material-symbols-outlined mr-3 text-[20px]">analytics</span>Grade Analytics</a><a class="flex items-center px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="reports" href="#"><span class="material-symbols-outlined mr-3 text-[20px]">description</span>Reports</a></nav><div class="pt-4 mt-auto border-t border-outline-variant/15"><div class="flex items-center gap-3 px-2"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="overflow-hidden"><p class="text-sm font-medium text-on-surface truncate">Dr. Eleanor Vance</p><p class="text-xs text-outline truncate">Faculty of Letters</p></div></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-20 bg-surface/80 backdrop-blur-xl z-40 flex items-center justify-between px-10 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center w-96 bg-surface-container-high/60 rounded-xl px-4 py-2.5"><span class="material-symbols-outlined text-outline text-[20px] mr-3">search</span><input class="bg-transparent border-none outline-none text-sm w-full text-on-surface placeholder:text-outline" placeholder="Search students, courses, or records..." type="text"/></div><div class="flex items-center gap-6"><button class="text-outline hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[22px]">notifications</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="relative pt-20 bg-surface min-h-screen px-12 py-10"><div class="flex flex-col w-full pb-20">
+<!-- Top Intro / Editorial Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+<div>
+<div class="flex items-center gap-3 mb-2">
+<span class="text-xs font-label uppercase tracking-widest text-tertiary">Institutional Review</span>
+<span class="w-8 h-[1px] bg-outline-variant"></span>
+<span class="text-xs font-label text-outline">Academic Year 2024–2025</span>
+</div>
+<h2 class="text-4xl lg:text-5xl font-headline font-bold text-on-surface tracking-tight">Performance &amp; Analytics</h2>
+</div>
+<div class="flex items-center gap-3">
+<button class="px-5 py-2.5 bg-surface-container-high hover:bg-surface-dim text-on-surface font-label text-sm rounded-xl transition-all shadow-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">download</span> Export Report
+      </button>
+<button class="px-5 py-2.5 bg-gradient-to-r from-primary to-primary-container text-on-primary font-label text-sm rounded-xl transition-all shadow-md hover:opacity-95 flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">auto_graph</span> Generate Insights
+      </button>
+</div>
+</div>
+<!-- High-Level Metrics Grid (Bento style, no lines, deep surface shifts) -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+<!-- Metric 1 -->
+<div class="bg-surface-container-low p-8 rounded-xl shadow-sm relative overflow-hidden group hover:bg-surface-container transition-all">
+<div class="absolute right-4 top-4 text-outline/10 group-hover:text-primary/10 transition-colors">
+<span class="material-symbols-outlined text-[64px]">group</span>
+</div>
+<p class="text-xs font-label uppercase tracking-wider text-outline mb-2">Total Students Enrolled</p>
+<div class="flex items-baseline gap-3">
+<h3 class="text-4xl font-headline font-bold text-on-surface">14,280</h3>
+<span class="text-xs font-medium text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded">+4.2%</span>
+</div>
+<p class="text-xs text-on-surface-variant mt-4 font-body">Across 42 distinct undergraduate &amp; graduate faculties.</p>
+</div>
+<!-- Metric 2 -->
+<div class="bg-surface-container-low p-8 rounded-xl shadow-sm relative overflow-hidden group hover:bg-surface-container transition-all">
+<div class="absolute right-4 top-4 text-outline/10 group-hover:text-primary/10 transition-colors">
+<span class="material-symbols-outlined text-[64px]">school</span>
+</div>
+<p class="text-xs font-label uppercase tracking-wider text-outline mb-2">Average Cumulative GPA</p>
+<div class="flex items-baseline gap-3">
+<h3 class="text-4xl font-headline font-bold text-on-surface">3.42</h3>
+<span class="text-xs font-medium text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded">+0.08</span>
+</div>
+<p class="text-xs text-on-surface-variant mt-4 font-body">Scale 4.0. Weighted median across all departments.</p>
+</div>
+<!-- Metric 3 -->
+<div class="bg-surface-container-low p-8 rounded-xl shadow-sm relative overflow-hidden group hover:bg-surface-container transition-all">
+<div class="absolute right-4 top-4 text-outline/10 group-hover:text-tertiary/15 transition-colors">
+<span class="material-symbols-outlined text-[64px]">verified</span>
+</div>
+<p class="text-xs font-label uppercase tracking-wider text-outline mb-2">Retention Rate</p>
+<div class="flex items-baseline gap-3">
+<h3 class="text-4xl font-headline font-bold text-on-surface">94.8%</h3>
+<span class="text-xs font-medium text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded">+1.1%</span>
+</div>
+<p class="text-xs text-on-surface-variant mt-4 font-body">Year-over-year persistence tracking metric.</p>
+</div>
+<!-- Metric 4 -->
+<div class="bg-surface-container-low p-8 rounded-xl shadow-sm relative overflow-hidden group hover:bg-surface-container transition-all">
+<div class="absolute right-4 top-4 text-outline/10 group-hover:text-error/15 transition-colors">
+<span class="material-symbols-outlined text-[64px]">warning</span>
+</div>
+<p class="text-xs font-label uppercase tracking-wider text-outline mb-2">Academic Warnings</p>
+<div class="flex items-baseline gap-3">
+<h3 class="text-4xl font-headline font-bold text-on-surface">312</h3>
+<span class="text-xs font-medium text-error bg-red-50 px-2 py-0.5 rounded">-14 students</span>
+</div>
+<p class="text-xs text-on-surface-variant mt-4 font-body">Requires faculty advisor review &amp; intervention.</p>
+</div>
+</div>
+<!-- Scholarly Overview & Trends Section -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-12">
+<!-- Main Scholarly Overview Card -->
+<div class="lg:col-span-8 bg-surface-container-lowest p-8 lg:p-12 rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div>
+<div class="flex items-center justify-between mb-6">
+<span class="text-xs font-label tracking-widest uppercase text-outline">Departmental Trajectory</span>
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-primary inline-block"></span>
+<span class="text-xs font-label text-on-surface-variant">Humanities</span>
+<span class="w-3 h-3 rounded-full bg-tertiary inline-block ml-4"></span>
+<span class="text-xs font-label text-on-surface-variant">Sciences</span>
+</div>
+</div>
+<h3 class="text-2xl lg:text-3xl font-headline font-bold text-on-surface mb-4">Longitudinal Performance Trends Across Core Disciplines</h3>
+<p class="text-on-surface-variant font-body text-sm leading-relaxed mb-8 max-w-2xl">
+          An examination of cumulative grade point averages over the past four semesters reveals significant resilience in classical studies and an upward trajectory in rigorous quantitative programs.
+        </p>
+<!-- Simulated SVG Trend Chart -->
+<div class="w-full h-64 bg-surface-container-low rounded-xl p-6 relative flex flex-col justify-between">
+<div class="flex justify-between items-center text-xs font-label text-outline">
+<span>GPA 4.0</span>
+<span>GPA 3.5</span>
+<span>GPA 3.0</span>
+</div>
+<!-- SVG Graph Line Simulation -->
+<div class="absolute inset-x-6 inset-y-12 flex items-center">
+<svg class="w-full h-32 overflow-visible" fill="none" viewbox="0 0 600 120">
+<path d="M0 60 Q 150 20, 300 45 T 600 15" fill="none" stroke="#094cb2" stroke-width="3"></path>
+<path d="M0 90 Q 150 70, 300 65 T 600 40" fill="none" stroke="#6d5e00" stroke-dasharray="4 4" stroke-width="3"></path>
+<!-- Data Points -->
+<circle cx="0" cy="60" fill="#094cb2" r="4"></circle>
+<circle cx="150" cy="35" fill="#094cb2" r="4"></circle>
+<circle cx="300" cy="45" fill="#094cb2" r="4"></circle>
+<circle cx="450" cy="25" fill="#094cb2" r="4"></circle>
+<circle cx="600" cy="15" fill="#094cb2" r="4"></circle>
+</svg>
+</div>
+<div class="flex justify-between text-xs font-label text-outline z-10">
+<span>Fall '22</span>
+<span>Spring '23</span>
+<span>Fall '23</span>
+<span>Spring '24</span>
+<span>Fall '24</span>
+</div>
+</div>
+</div>
+<div class="mt-8 pt-6 border-t border-outline-variant/15 flex items-center justify-between text-xs font-label text-outline">
+<span>Source: Registrar's Archival Records</span>
+<a class="text-primary font-medium hover:underline flex items-center gap-1" href="#">View Full Analytics Dataset <span class="material-symbols-outlined text-[16px]">arrow_forward</span></a>
+</div>
+</div>
+<!-- Top-Performing Departments Sidebar Card -->
+<div class="lg:col-span-4 bg-surface-container-low p-8 rounded-xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-6">
+<h4 class="font-headline font-bold text-lg text-on-surface">Top Departments</h4>
+<span class="text-xs font-label text-outline uppercase">By GPA</span>
+</div>
+<div class="space-y-4">
+<!-- Dept 1 -->
+<div class="p-4 bg-surface-container-lowest rounded-xl flex items-center justify-between shadow-xs">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-primary-fixed flex items-center justify-center text-primary font-headline font-bold">1</div>
+<div>
+<p class="text-sm font-medium text-on-surface">Classical Philology</p>
+<p class="text-xs text-outline">Faculty of Letters</p>
+</div>
+</div>
+<span class="font-headline font-bold text-on-surface text-sm">3.82</span>
+</div>
+<!-- Dept 2 -->
+<div class="p-4 bg-surface-container-lowest rounded-xl flex items-center justify-between shadow-xs">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed font-headline font-bold">2</div>
+<div>
+<p class="text-sm font-medium text-on-surface">Theoretical Physics</p>
+<p class="text-xs text-outline">Faculty of Sciences</p>
+</div>
+</div>
+<span class="font-headline font-bold text-on-surface text-sm">3.76</span>
+</div>
+<!-- Dept 3 -->
+<div class="p-4 bg-surface-container-lowest rounded-xl flex items-center justify-between shadow-xs">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed font-headline font-bold">3</div>
+<div>
+<p class="text-sm font-medium text-on-surface">Jurisprudence</p>
+<p class="text-xs text-outline">Faculty of Law</p>
+</div>
+</div>
+<span class="font-headline font-bold text-on-surface text-sm">3.71</span>
+</div>
+<!-- Dept 4 -->
+<div class="p-4 bg-surface-container-lowest rounded-xl flex items-center justify-between shadow-xs">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-on-surface-variant font-headline font-bold">4</div>
+<div>
+<p class="text-sm font-medium text-on-surface">Art History &amp; Arch.</p>
+<p class="text-xs text-outline">Faculty of Arts</p>
+</div>
+</div>
+<span class="font-headline font-bold text-on-surface text-sm">3.65</span>
+</div>
+</div>
+</div>
+<div class="mt-8">
+<button class="w-full py-3 bg-surface-container-high hover:bg-surface-dim text-on-surface rounded-xl font-label text-xs uppercase tracking-wider transition-all font-medium">
+          Browse All 42 Departments
+        </button>
+</div>
+</div>
+</div>
+<!-- Flagged Student Reviews & Quick Actions Section -->
+<div class="bg-surface-container-lowest p-8 lg:p-10 rounded-xl shadow-sm">
+<div class="flex flex-col md:flex-row md:items-center justify-between mb-8 gap-4">
+<div>
+<span class="text-xs font-label uppercase tracking-widest text-error">Action Required</span>
+<h3 class="text-2xl font-headline font-bold text-on-surface mt-1">Flagged Student Reviews &amp; Consultations</h3>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-xs font-label text-outline bg-surface-container-low px-3 py-1.5 rounded-lg">Showing 4 high-priority flags</span>
+<button class="text-xs font-label text-primary font-medium hover:underline ml-2">View All (312)</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Flag Item 1 -->
+<div class="p-6 bg-surface-container-low rounded-xl flex flex-col justify-between relative">
+<div>
+<div class="flex items-center justify-between mb-3">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-error-container text-on-error-container flex items-center justify-center font-headline font-bold text-sm">
+                JD
+              </div>
+<div>
+<h4 class="font-headline font-bold text-on-surface text-base">Julian D'Souza</h4>
+<p class="text-xs text-outline">ID: 8829104 • Faculty of Sciences</p>
+</div>
+</div>
+<span class="text-xs font-label px-2.5 py-1 rounded bg-red-100 text-error font-medium">GPA: 1.84</span>
+</div>
+<p class="text-xs text-on-surface-variant font-body mb-4">
+            Missed 3 consecutive midterm submissions in Advanced Calculus. Advisor meeting pending since Oct 12.
+          </p>
+</div>
+<div class="flex items-center justify-between pt-4 border-t border-outline-variant/15">
+<span class="text-xs text-outline">Referred by: Prof. H. Sterling</span>
+<div class="flex items-center gap-2">
+<button class="px-3 py-1.5 bg-surface-container-highest hover:bg-surface-dim text-on-surface text-xs font-label rounded-lg transition-all">Dismiss</button>
+<button class="px-3 py-1.5 bg-primary text-on-primary text-xs font-label rounded-lg hover:opacity-90 transition-all">Schedule Review</button>
+</div>
+</div>
+</div>
+<!-- Flag Item 2 -->
+<div class="p-6 bg-surface-container-low rounded-xl flex flex-col justify-between relative">
+<div>
+<div class="flex items-center justify-between mb-3">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center font-headline font-bold text-sm">
+                AM
+              </div>
+<div>
+<h4 class="font-headline font-bold text-on-surface text-base">Aurelia Moreau</h4>
+<p class="text-xs text-outline">ID: 7731920 • Faculty of Letters</p>
+</div>
+</div>
+<span class="text-xs font-label px-2.5 py-1 rounded bg-amber-100 text-tertiary font-medium">GPA: 2.10</span>
+</div>
+<p class="text-xs text-on-surface-variant font-body mb-4">
+            Sudden drop in seminar attendance. Requesting temporary leave of absence review for medical reasons.
+          </p>
+</div>
+<div class="flex items-center justify-between pt-4 border-t border-outline-variant/15">
+<span class="text-xs text-outline">Referred by: Dr. E. Vance</span>
+<div class="flex items-center gap-2">
+<button class="px-3 py-1.5 bg-surface-container-highest hover:bg-surface-dim text-on-surface text-xs font-label rounded-lg transition-all">Dismiss</button>
+<button class="px-3 py-1.5 bg-primary text-on-primary text-xs font-label rounded-lg hover:opacity-90 transition-all">Schedule Review</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></main></div></body></html>
