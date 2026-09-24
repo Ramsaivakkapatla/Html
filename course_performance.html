@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {"colors": {"on-primary-fixed": "#001946", "on-surface": "#1b1c1d", "surface-bright": "#faf9fa", "on-secondary": "#ffffff", "inverse-on-surface": "#f2f0f1", "surface-dim": "#dbdadb", "outline": "#737784", "inverse-primary": "#b1c5ff", "on-primary": "#ffffff", "on-surface-variant": "#434653", "on-background": "#1b1c1d", "primary-fixed": "#d9e2ff", "on-error-container": "#93000a", "tertiary": "#6d5e00", "secondary-fixed": "#dfe3e8", "on-primary-fixed-variant": "#00419d", "surface-container-lowest": "#ffffff", "on-error": "#ffffff", "surface-tint": "#2259bf", "on-tertiary-fixed": "#211b00", "error": "#ba1a1a", "on-tertiary-fixed-variant": "#524600", "primary-container": "#3366cc", "surface-variant": "#e3e2e3", "secondary-fixed-dim": "#c2c7cc", "surface-container-highest": "#e3e2e3", "tertiary-fixed": "#f9e37a", "primary": "#094cb2", "tertiary-fixed-dim": "#dcc661", "secondary": "#5a5f63", "surface-container-low": "#f5f3f4", "surface": "#faf9fa", "on-tertiary-container": "#4a3f00", "inverse-surface": "#303031", "tertiary-container": "#bfab49", "on-secondary-fixed-variant": "#42474b", "surface-container-high": "#e9e8e9", "outline-variant": "#c3c6d5", "secondary-container": "#dfe3e8", "surface-container": "#efedee", "on-secondary-container": "#606569", "on-primary-container": "#e7ebff", "background": "#faf9fa", "primary-fixed-dim": "#b1c5ff", "error-container": "#ffdad6", "on-secondary-fixed": "#171c20", "on-tertiary": "#ffffff"}, "borderRadius": {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"}, "fontFamily": {"headline": ["Noto Serif"], "display": ["Noto Serif"], "body": ["Inter"], "label": ["Public Sans"]}}}};</script><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Noto+Serif:wght@400;600;700&amp;family=Public+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/></head><body class="bg-surface font-body text-on-surface"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col pt-8 pb-8 px-6"><div class="mb-12"><h1 class="text-2xl font-headline font-bold tracking-tight text-on-surface">Alexandria</h1><p class="text-xs font-label text-outline uppercase tracking-wider mt-1">Academic Analytics</p></div><nav class="flex-1 space-y-2" data-active-classes="bg-primary text-on-primary font-medium rounded-xl shadow-sm"><a class="flex items-center px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="dashboard" href="#"><span class="material-symbols-outlined mr-3 text-[20px]">dashboard</span>Dashboard</a><a class="flex items-center px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="student-directory" href="#"><span class="material-symbols-outlined mr-3 text-[20px]">group</span>Student Directory</a><a aria-current="page" class="flex items-center px-4 py-3 transition-all bg-primary text-on-primary font-medium rounded-xl shadow-sm" data-path="course-performance" href="#"><span class="material-symbols-outlined mr-3 text-[20px]">school</span>Course Performance</a><a class="flex items-center px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="grade-analytics" href="#"><span class="material-symbols-outlined mr-3 text-[20px]">analytics</span>Grade Analytics</a><a class="flex items-center px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="reports" href="#"><span class="material-symbols-outlined mr-3 text-[20px]">description</span>Reports</a></nav><div class="pt-4 mt-auto border-t border-outline-variant/15"><div class="flex items-center gap-3 px-2"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="overflow-hidden"><p class="text-sm font-medium text-on-surface truncate">Dr. Eleanor Vance</p><p class="text-xs text-outline truncate">Faculty of Letters</p></div></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-20 bg-surface/80 backdrop-blur-xl z-40 flex items-center justify-between px-10 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center w-96 bg-surface-container-high/60 rounded-xl px-4 py-2.5"><span class="material-symbols-outlined text-outline text-[20px] mr-3">search</span><input class="bg-transparent border-none outline-none text-sm w-full text-on-surface placeholder:text-outline" placeholder="Search students, courses, or records..." type="text"/></div><div class="flex items-center gap-6"><button class="text-outline hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[22px]">notifications</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="relative pt-20 bg-surface min-h-screen px-12 py-10"><div class="flex flex-col w-full">
+<!-- Top Banner / Editorial Intro -->
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+<div>
+<div class="flex items-center gap-3 mb-3">
+<span class="px-3 py-1 bg-tertiary-fixed text-on-tertiary-fixed-variant rounded-full text-xs font-label font-medium uppercase tracking-wider">Faculty Report</span>
+<span class="text-outline text-xs font-label">Academic Year 2023–2024</span>
+</div>
+<h2 class="text-4xl font-headline font-bold text-on-surface tracking-tight">Course Performance &amp; Metrics</h2>
+<p class="text-on-surface-variant font-body mt-2 max-w-2xl text-base">Comprehensive cross-departmental analysis of grade distributions, attendance correlations, and longitudinal pass/fail ratios across primary scholarly divisions.</p>
+</div>
+<div class="flex items-center gap-3">
+<button class="px-5 py-2.5 bg-surface-container-high text-on-surface font-label text-sm rounded-xl hover:bg-surface-dim transition-all flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">filter_list</span>
+        Filter Term
+      </button>
+<button class="px-5 py-2.5 bg-gradient-to-r from-primary to-primary-container text-on-primary font-label text-sm rounded-xl shadow-sm hover:opacity-95 transition-all flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">download</span>
+        Export Dataset
+      </button>
+</div>
+</div>
+<!-- Key Metrics Bento Row -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
+<!-- Card 1 -->
+<div class="bg-surface-container-low p-6 rounded-xl flex flex-col justify-between relative overflow-hidden group">
+<div>
+<div class="flex items-center justify-between text-outline mb-2">
+<span class="font-label text-xs uppercase tracking-wider">Overall Pass Ratio</span>
+<span class="material-symbols-outlined text-primary text-[20px]">verified</span>
+</div>
+<div class="text-4xl font-headline font-bold text-on-surface mt-1">94.2%</div>
+</div>
+<div class="mt-6 flex items-center gap-2 text-xs font-label text-tertiary font-medium">
+<span class="material-symbols-outlined text-[16px]">trending_up</span>
+<span>+1.4% from previous term</span>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-low p-6 rounded-xl flex flex-col justify-between relative overflow-hidden group">
+<div>
+<div class="flex items-center justify-between text-outline mb-2">
+<span class="font-label text-xs uppercase tracking-wider">Active Cohort</span>
+<span class="material-symbols-outlined text-primary text-[20px]">group</span>
+</div>
+<div class="text-4xl font-headline font-bold text-on-surface mt-1">3,842</div>
+</div>
+<div class="mt-6 flex items-center gap-2 text-xs font-label text-on-surface-variant">
+<span>Across 4 major disciplines</span>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-low p-6 rounded-xl flex flex-col justify-between relative overflow-hidden group">
+<div>
+<div class="flex items-center justify-between text-outline mb-2">
+<span class="font-label text-xs uppercase tracking-wider">Avg. Attendance</span>
+<span class="material-symbols-outlined text-primary text-[20px]">schedule</span>
+</div>
+<div class="text-4xl font-headline font-bold text-on-surface mt-1">88.7%</div>
+</div>
+<div class="mt-6 flex items-center gap-2 text-xs font-label text-tertiary font-medium">
+<span class="material-symbols-outlined text-[16px]">trending_up</span>
+<span>Strong correlation with GPA</span>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="bg-surface-container-low p-6 rounded-xl flex flex-col justify-between relative overflow-hidden group">
+<div>
+<div class="flex items-center justify-between text-outline mb-2">
+<span class="font-label text-xs uppercase tracking-wider">Grade Variance</span>
+<span class="material-symbols-outlined text-primary text-[20px]">analytics</span>
+</div>
+<div class="text-4xl font-headline font-bold text-on-surface mt-1">±0.34</div>
+</div>
+<div class="mt-6 flex items-center gap-2 text-xs font-label text-on-surface-variant">
+<span>Normalized deviation</span>
+</div>
+</div>
+</div>
+<!-- Main Grid: Departmental Breakdown & Visualizations -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+<!-- Left 2 Cols: Departmental Averages & Distributions -->
+<div class="lg:col-span-2 flex flex-col gap-8">
+<!-- Departmental Overview Card -->
+<div class="bg-surface-container-low p-8 rounded-xl">
+<div class="flex items-center justify-between mb-8">
+<div>
+<h3 class="text-xl font-headline font-bold text-on-surface">Departmental Scholarly Averages</h3>
+<p class="text-xs font-label text-outline mt-1 uppercase tracking-wider">Comparative analysis across primary faculties</p>
+</div>
+<div class="flex items-center gap-4 text-xs font-label">
+<div class="flex items-center gap-1.5"><span class="w-3 h-3 rounded-full bg-primary inline-block"></span><span class="text-on-surface-variant">GPA</span></div>
+<div class="flex items-center gap-1.5"><span class="w-3 h-3 rounded-full bg-tertiary-container inline-block"></span><span class="text-on-surface-variant">Pass Rate</span></div>
+</div>
+</div>
+<div class="space-y-6">
+<!-- Computer Science -->
+<div>
+<div class="flex justify-between text-sm font-medium mb-2">
+<span class="text-on-surface font-headline font-semibold">Computer Science</span>
+<span class="text-on-surface-variant font-label">GPA: 3.64 / Pass: 96%</span>
+</div>
+<div class="w-full h-3 bg-surface-container-highest rounded-full overflow-hidden flex">
+<div class="bg-primary h-full rounded-full transition-all duration-1000" style="width: 91%"></div>
+</div>
+</div>
+<!-- Literature -->
+<div>
+<div class="flex justify-between text-sm font-medium mb-2">
+<span class="text-on-surface font-headline font-semibold">Literature &amp; Languages</span>
+<span class="text-on-surface-variant font-label">GPA: 3.82 / Pass: 98%</span>
+</div>
+<div class="w-full h-3 bg-surface-container-highest rounded-full overflow-hidden flex">
+<div class="bg-primary h-full rounded-full transition-all duration-1000" style="width: 95%"></div>
+</div>
+</div>
+<!-- Economics -->
+<div>
+<div class="flex justify-between text-sm font-medium mb-2">
+<span class="text-on-surface font-headline font-semibold">Economics &amp; Political Science</span>
+<span class="text-on-surface-variant font-label">GPA: 3.45 / Pass: 91%</span>
+</div>
+<div class="w-full h-3 bg-surface-container-highest rounded-full overflow-hidden flex">
+<div class="bg-primary h-full rounded-full transition-all duration-1000" style="width: 86%"></div>
+</div>
+</div>
+<!-- Physics -->
+<div>
+<div class="flex justify-between text-sm font-medium mb-2">
+<span class="text-on-surface font-headline font-semibold">Physics &amp; Applied Mathematics</span>
+<span class="text-on-surface-variant font-label">GPA: 3.38 / Pass: 89%</span>
+</div>
+<div class="w-full h-3 bg-surface-container-highest rounded-full overflow-hidden flex">
+<div class="bg-primary h-full rounded-full transition-all duration-1000" style="width: 84%"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Attendance vs Grade Correlation Widget -->
+<div class="bg-surface-container-low p-8 rounded-xl">
+<div class="flex items-center justify-between mb-6">
+<div>
+<h3 class="text-xl font-headline font-bold text-on-surface">Attendance &amp; Grade Correlation Matrix</h3>
+<p class="text-xs font-label text-outline mt-1 uppercase tracking-wider">Cross-referencing lecture presence with final examination marks</p>
+</div>
+<span class="material-symbols-outlined text-outline">scatter_plot</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4">
+<div class="bg-surface-container-lowest p-5 rounded-xl">
+<p class="text-xs font-label text-outline uppercase tracking-wider">High Attendance (&gt;90%)</p>
+<p class="text-2xl font-headline font-bold text-on-surface mt-2">3.82 GPA</p>
+<p class="text-xs text-tertiary mt-2 font-medium">98.4% success outcome</p>
+</div>
+<div class="bg-surface-container-lowest p-5 rounded-xl">
+<p class="text-xs font-label text-outline uppercase tracking-wider">Moderate (75-90%)</p>
+<p class="text-2xl font-headline font-bold text-on-surface mt-2">3.41 GPA</p>
+<p class="text-xs text-on-surface-variant mt-2">91.2% success outcome</p>
+</div>
+<div class="bg-surface-container-lowest p-5 rounded-xl">
+<p class="text-xs font-label text-outline uppercase tracking-wider">Low Attendance (&lt;75%)</p>
+<p class="text-2xl font-headline font-bold text-on-surface mt-2">2.75 GPA</p>
+<p class="text-xs text-error mt-2">74.5% success outcome</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Col: Grade Distribution Breakdown (Donut/Bar summary) -->
+<div class="flex flex-col gap-8">
+<div class="bg-surface-container-low p-8 rounded-xl flex flex-col justify-between h-full">
+<div>
+<div class="flex items-center justify-between mb-6">
+<h3 class="text-xl font-headline font-bold text-on-surface">Grade Distribution</h3>
+<span class="material-symbols-outlined text-outline">pie_chart</span>
+</div>
+<p class="text-xs font-label text-outline uppercase tracking-wider mb-8">Aggregate letter grade frequency across all disciplines</p>
+<div class="space-y-4">
+<div>
+<div class="flex justify-between text-sm mb-1">
+<span class="font-medium text-on-surface">Grade A (90-100%)</span>
+<span class="text-on-surface-variant font-label">34%</span>
+</div>
+<div class="w-full h-2 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 34%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-sm mb-1">
+<span class="font-medium text-on-surface">Grade B (80-89%)</span>
+<span class="text-on-surface-variant font-label">42%</span>
+</div>
+<div class="w-full h-2 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="bg-primary-container h-full rounded-full" style="width: 42%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-sm mb-1">
+<span class="font-medium text-on-surface">Grade C (70-79%)</span>
+<span class="text-on-surface-variant font-label">16%</span>
+</div>
+<div class="w-full h-2 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="bg-tertiary-container h-full rounded-full" style="width: 16%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-sm mb-1">
+<span class="font-medium text-on-surface">Grade D/F (&lt;70%)</span>
+<span class="text-on-surface-variant font-label">8%</span>
+</div>
+<div class="w-full h-2 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="bg-error h-full rounded-full" style="width: 8%"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-8 pt-6 border-t border-outline-variant/15">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center text-on-primary-fixed">
+<span class="material-symbols-outlined text-[20px]">lightbulb</span>
+</div>
+<div>
+<p class="text-xs font-headline font-bold text-on-surface">Curator Note</p>
+<p class="text-xs text-outline mt-0.5">Grade inflation remains stable compared to baseline tri-annual records.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Detailed Course Ledger Table -->
+<div class="bg-surface-container-low rounded-xl p-8 mb-12">
+<div class="flex flex-col md:flex-row md:items-center justify-between mb-8 gap-4">
+<div>
+<h3 class="text-xl font-headline font-bold text-on-surface">Key Course Registry</h3>
+<p class="text-xs font-label text-outline mt-1 uppercase tracking-wider">Per-course statistical ledger and historical pass rates</p>
+</div>
+<div class="flex items-center gap-3">
+<input class="bg-surface-container-lowest px-4 py-2 text-sm rounded-xl outline-none text-on-surface placeholder:text-outline w-64" placeholder="Filter courses..." type="text"/>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="border-b border-outline-variant/15 text-xs font-label text-outline uppercase tracking-wider">
+<th class="py-3 px-4 font-medium">Course Code &amp; Title</th>
+<th class="py-3 px-4 font-medium">Department</th>
+<th class="py-3 px-4 font-medium">Enrolled</th>
+<th class="py-3 px-4 font-medium">Avg. Grade</th>
+<th class="py-3 px-4 font-medium">Pass Ratio</th>
+<th class="py-3 px-4 font-medium text-right">Action</th>
+</tr>
+</thead>
+<tbody class="text-sm divide-y divide-outline-variant/10">
+<tr class="hover:bg-surface-container-high/40 transition-colors">
+<td class="py-4 px-4 font-medium text-on-surface">CS-101: Introduction to Algorithmic Logic</td>
+<td class="py-4 px-4 text-on-surface-variant">Computer Science</td>
+<td class="py-4 px-4 text-on-surface-variant">240</td>
+<td class="py-4 px-4 font-headline font-semibold text-on-surface">3.71</td>
+<td class="py-4 px-4"><span class="px-2.5 py-1 bg-tertiary-fixed text-on-tertiary-fixed-variant rounded-full text-xs font-label font-medium">97%</span></td>
+<td class="py-4 px-4 text-right"><button class="text-primary hover:underline font-medium text-xs">View Report</button></td>
+</tr>
+<tr class="hover:bg-surface-container-high/40 transition-colors">
+<td class="py-4 px-4 font-medium text-on-surface">LIT-204: Comparative Modern Poetics</td>
+<td class="py-4 px-4 text-on-surface-variant">Literature</td>
+<td class="py-4 px-4 text-on-surface-variant">115</td>
+<td class="py-4 px-4 font-headline font-semibold text-on-surface">3.89</td>
+<td class="py-4 px-4"><span class="px-2.5 py-1 bg-tertiary-fixed text-on-tertiary-fixed-variant rounded-full text-xs font-label font-medium">99%</span></td>
+<td class="py-4 px-4 text-right"><button class="text-primary hover:underline font-medium text-xs">View Report</button></td>
+</tr>
+<tr class="hover:bg-surface-container-high/40 transition-colors">
+<td class="py-4 px-4 font-medium text-on-surface">ECO-302: Macroeconomic Policy &amp; Systems</td>
+<td class="py-4 px-4 text-on-surface-variant">Economics</td>
+<td class="py-4 px-4 text-on-surface-variant">185</td>
+<td class="py-4 px-4 font-headline font-semibold text-on-surface">3.42</td>
+<td class="py-4 px-4"><span class="px-2.5 py-1 bg-surface-container-highest text-on-surface-variant rounded-full text-xs font-label font-medium">90%</span></td>
+<td class="py-4 px-4 text-right"><button class="text-primary hover:underline font-medium text-xs">View Report</button></td>
+</tr>
+<tr class="hover:bg-surface-container-high/40 transition-colors">
+<td class="py-4 px-4 font-medium text-on-surface">PHY-401: Quantum Mechanics Fundamentals</td>
+<td class="py-4 px-4 text-on-surface-variant">Physics</td>
+<td class="py-4 px-4 text-on-surface-variant">92</td>
+<td class="py-4 px-4 font-headline font-semibold text-on-surface">3.25</td>
+<td class="py-4 px-4"><span class="px-2.5 py-1 bg-surface-container-highest text-on-surface-variant rounded-full text-xs font-label font-medium">88%</span></td>
+<td class="py-4 px-4 text-right"><button class="text-primary hover:underline font-medium text-xs">View Report</button></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div></main></div></body></html>
